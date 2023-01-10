@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+
+body {
+    font-family: 'Smythe';
+    font-style: normal;
+    font-weight: 400;
+    background-color: #F5F5F5;
+    color: #000000;
+}
+
+.page-wrapper {
+    width: 600px;
+    height: 1161px; /* auto */
+    margin: 0 auto;
+}
+
+header {
+    width: 600px;
+    height: 167px;
+    background-image: url(./images/banner_burger.png);
+    background-repeat: no-repeat;
+    color: #ffffff;
+    padding: 1px;
+    margin-bottom: 22px;
+}
+
+header > h2 {
+    margin-top: 46px;
+    margin-bottom: 0px;
+    font-size: 39px;
+    line-height: 24px;
+}
+
+header p {
+    margin-top: 19px;
+    font-size: 22px;
+    line-height: 14px;
+}
+
+header h2,
+header p {
+    font-weight: 400;
+    margin-left: 46px;
+}
+
+.menuItem {
+    margin: 45px 45px 0px 45px;
+    border-bottom: 1px solid #D2D2D2;
+}
+
+.item-pic {
+    width: 70px;
+    height: 70px;
+    float: left;
+    opacity: 0.72;
+}
+
+.offer-description {
+    display: inline-block;
+    margin-left: 31px;
+}
+
+.item-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 28px;
+    line-height: 17px;  
+}
+
+.item-description {
+    margin-top: 9px;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: #8B8B8B;
+}
+
+.item-price {
+    margin-top: 8px;
+    margin-bottom: 0;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.add-btn {
+    width: 50px;
+    height: 50px;
+    float: right;
+    margin-top: 5px;
+    border: 1.5px solid #DEDEDE;
+    border-radius: 50%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 32px;
+    line-height: 24px;
+    text-align: center;
+    color: #3C3C3C;
+}
+
+/*
+main {
+    background: brown;
+}
+*/
