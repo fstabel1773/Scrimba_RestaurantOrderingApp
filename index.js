@@ -93,7 +93,7 @@ function getOfferHtml() {
 
     if (isOrderFinished === true) {
         offerHtml+=`
-            <h3>Thank you ${getFormData()}, your order is on it's way!</h3>
+            <h3 class="order-confirm">Thank you ${getFormData()}, your order is on it's way!</h3>
             <input type="button" onclick="" class="new-order-btn" id="new-order-btn" value="New Order" />
         `
     }
@@ -108,21 +108,26 @@ function getOrderHtml() {
         let totalPrice = 0
 
         orderHtml = `
-            <h3>Your order</h3>
+            <h3 class="order-section-title">Your order</h3>
         `
 
         order.forEach((item, index) => {
             orderHtml += `
-                <h3>${item.name}</h3>
-                <button data-order-id="${index}">remove</button>
-                <p>${item.price}</p>
+                <div class="order-item">
+                    <h3 class="order-name">${item.name}</h3>
+                    <button class="order-section-item-remove-btn" data-order-id="${index}">remove</button>
+                    <p class="order-price">$ ${item.price}</p>
+                </div>
             `;
             totalPrice += item.price
         })
 
         orderHtml += `
-            <h3>Total price:<h3>
-            <p>${totalPrice}</p>
+            <div class="divider"></div>
+            <div class="order-item">
+                <h3 class="order-name">Total price:<h3>
+                <p class="order-price">$ ${totalPrice}</p>
+            </div>
             <button id="complete-order-btn">Complete order</button>
         `
     }
@@ -136,12 +141,12 @@ function getPaymentFormHtml() {
         paymentForm = `
             <form class="payment-form" id="payment-form">
                 <h3>Enter card details</h3>
-                <input type="text" name="name" placeholder="Enter your name" required />
-                <input type="" name="cardNumber" placeholder="Enter card number" pattern="" required />
-                <input type="" name="cvv" placeholder="CVV" pattern="" required />
+                <input type="text" name="name" placeholder="Enter your name" />
+                <input type="text" name="cardNumber" placeholder="Enter card number"  />
+                <input type="text" name="cvv" placeholder="CVV"  />
                 <div class="payment-btns">
-                    <input type="button" onclick="" class="payment-confirm-btn" id="payment-confirm-btn" value="Pay" />
-                    <input type="button" onclick="" class="payment-breakup-btn" id="payment-breakup-btn" value="Go back" />
+                    <input type="button"  class="payment-confirm-btn" id="payment-confirm-btn" value="Pay" />
+                    <input type="button" class="payment-breakup-btn" id="payment-breakup-btn" value="Go back" />
                 </div>
             </form>
         `
