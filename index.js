@@ -142,10 +142,10 @@ function getPaymentFormHtml() {
             <form class="payment-form" id="payment-form">
                 <h3>Enter card details</h3>
                 <input type="text" name="name" placeholder="Enter your name" />
-                <input type="text" name="cardNumber" placeholder="Enter card number"  />
-                <input type="text" name="cvv" placeholder="CVV"  />
+                <input type="text" name="cardNumber" placeholder="Enter card number" />
+                <input type="text" name="cvv" placeholder="CVV" />
                 <div class="payment-btns">
-                    <input type="button"  class="payment-confirm-btn" id="payment-confirm-btn" value="Pay" />
+                    <input type="submit"  class="payment-confirm-btn" id="payment-confirm-btn" value="Pay" />
                     <input type="button" class="payment-breakup-btn" id="payment-breakup-btn" value="Go back" />
                 </div>
             </form>
